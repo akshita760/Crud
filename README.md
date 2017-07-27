@@ -6,6 +6,12 @@ For Demo : https://shielded-earth-24100.herokuapp.com/
 note: users may have added few records so first fetch records delete existing record then use it.
 
 
+Instructions : 
+1.) machine should have node and mongo installed
+2.) npm install 
+3.) nodemon app.js
+
+
 User interface is not taken care... only the MVC and MVVM architecture of project development is considered in this.
 
 Fields
