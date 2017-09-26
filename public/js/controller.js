@@ -8,9 +8,9 @@ app.controller("myctrl",($scope,myfactory,$http)=>{
   $scope.findRecord=()=>{
       console.log("clicked");
     if($scope.prod.name){
-
-        $scope.tasks = myfactory.searchRecord($scope.prod.name);
-       
+        console.log($scope.prod.name);
+        $scope.tasks = myfactory.searchRecord($scope.tasks,$scope.prod.name);
+        console.log($scope.tasks);
     }
   };
 
@@ -19,6 +19,7 @@ app.controller("myctrl",($scope,myfactory,$http)=>{
      var promise = myfactory.showRecords();
      promise.then(function(data){
         $scope.tasks = data;
+        myfactory.taskArray = $scope.tasks;
         $scope.prod.id= parseInt(data[data.length-1].id)+1;
      },function(err){
         $scope.result = err;
@@ -26,6 +27,8 @@ app.controller("myctrl",($scope,myfactory,$http)=>{
    
   }
   $scope.fetchRecord=()=>{
+    //  var promise = myfactory.showRecords();
+    //  console.log(myfactory.taskArray);
      searchRecord();
   };
     
@@ -73,9 +76,9 @@ app.controller("myctrl",($scope,myfactory,$http)=>{
         });
           
     };
-    $scope.searchRecord =()=>{
-      $scope.tasks =  myfactory.searchRecord($scope.name);
-    };
+    // $scope.searchRecord =()=>{
+    //   $scope.tasks =  myfactory.searchRecord($scope.name);
+    // };
 
     $scope.updateRecord =()=>{
 

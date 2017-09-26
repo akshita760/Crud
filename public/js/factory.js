@@ -23,9 +23,9 @@ app.factory("myfactory",($http,$q)=>{
                 return !x.markForDeletion;
             });
         },
-        searchRecord(name){
-            console.log("hey");
-            return this.taskArray.filter((x)=>{
+        searchRecord(arr,name){
+            console.log(arr);
+            return arr.filter((x)=>{
                return (x.name==name);
             });
         },
