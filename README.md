@@ -25,7 +25,7 @@ Delete Operation : On clicking the bin icon the row get selected(or marked red) 
 
 Edit Operation : On clicking the pencil icon the row get selected(or marked green) for editing and data get transfered to name and desc fields and changes shall be made there and clicking update button will update that record.
 
-Search Operation : Search is done on the basis of name. Enter the name in name field and click the search option and only the searched row will be visible.
+Search Operation : Search is done on the basis of name. Enter the name in name field and click the search option and only the searched row will be visible..
 
 Fetch Operation: Fetch Shows all of the records added so far.
 
